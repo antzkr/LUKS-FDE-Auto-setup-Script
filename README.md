@@ -1,4 +1,4 @@
-# LUKS FDE Auto-setup Script
+# LUKS Full Disk Encryption Debian 13 Auto-setup Script
 version 12
 
 # PURPOSE
