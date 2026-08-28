@@ -40,8 +40,9 @@ Script can only be built from Debian-based linux desktop environments. Other lin
 2. Boot into live environment and download the script.
 3. Make executable, run the script and follow the prompts:
 
-    chmod +x debian13-fde-auto-setup-v1x.sh
-    sudo ./debian13-fde-auto-setup-v1x.sh
+   chmod +x debian13-fde-auto-setup-v1x.sh
+
+   sudo ./debian13-fde-auto-setup-v1x.sh
 
 5. Reboot once set up completes.
 
