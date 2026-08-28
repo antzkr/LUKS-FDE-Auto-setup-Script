@@ -47,6 +47,7 @@ Installing FDE will destroy the existing data on the disk so remember to backup 
 3. Make executable, run the script and follow the prompts:
 
      **chmod +x debian13-fde-auto-setup-v1x.sh**
+   
      **sudo ./debian13-fde-auto-setup-v1x.sh**
 
 5. Reboot once set up completes.
