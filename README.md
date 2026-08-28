@@ -1,37 +1,73 @@
 # LUKS FDE Auto-setup Script
-Bash script to auto-setup a Debian 13 full disk encryption (FDE) desktop, with a keyfile on a USB stick. 
+version 12
 
-v12
+# PURPOSE
+This bash script auto-sets up and installs a LUKS Full Disk Encryption system together with a completely working Debian 13 desktop with minimal intervention. You will only have to choose the target disk and USB, root partition size, desktop environment, and username.
 
 # RATIONALE
-High security (ie. encrypting everything, including the bootloader) comes at the cost of useability. This script aims to provide the best balance between security and convienience. The structure of the FDE system:
+High security (ie. encrypting everything, including the bootloader) comes at the cost of useability (and speed). This script aims to provide the best balance between security and convienience. The structure of the FDE system is as follows:
 - USB Stick: Contains /boot partition (unencrypted) and LUKS keyfile
 - Main Disk: LUKS encrypted with LVM containing separate root and home logical volumes
 - Keyfile: Stored on USB, used to unlock the LUKS container without typing a password
 
-This script will auto-setup and install FDE and a completely working Debian 13 desktop with minimal intervention. You will only have to choose the target disk and USB, root partition size, desktop environment, and username.
 
 # KEY FEATURES
 - Once encrypted, the system CANNOT boot without the USB stick
 - There is no password typing at startup, enabling a fast boot time)
 - Boot directory is physically seperated from the main disk so can't be tampered with (Evil Maid attack protection)
 - Separate encrypted /root and /home LVM partitions allows for independent management to make upgrading much simpler.
-- Choice of auto-installed desktop environments (GNOME, KDE, MATE, XFCE) with basic set of packages.
+- Choice of auto-installed desktop environments.
 - UEFI and legacy BIOS are both supported.
 
+# CUSTOMIZATION
+A minimal set of packages are installed to get you up and running on first boot. If you want a very lean and basic install, feel free to modify the script, and add or delete packages as you wish. These desktop environments available during the build process:
+- KDE Plasma
+- Gnome
+- Mate
+- XFCE
+
 # SYSTEM REQUIREMENTS
-Bash script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
-- Only x64 systems are supported (no x32).
-- ATA/SSD disk: SSD is strongly recommended to counter the runtime encryption overhead
+Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
+- Only x64 systems are supported (no legacy x32).
+- ATA/SSD disk: An SSD is strongly recommended to counter the runtime encryption overhead
 - One USB for the keyfile (at least 1GB)
 - One USB for the bootable live USB OS (e.g. Debian 13 live)
 - Remember to backup important data. All data on disk will be irreversibly deleted!
 
+
 # INSTALLATION
+1. First flash your favorite bootable live USB OS to the USB stick (e.g. Linux Mint)
+2. Boot into live environment and download the script.
+3. Make executable, run the script and follow the prompts:
 
-1. First flash your favorite bootable live USB OS to the USB stick (e.g. Balena Etcher works well for this). Then boot into the live environment.
-2. Boot into live environment and download script.
-3. Make executable and run:
+    chmod +x debian13-fde-auto-setup-v1x.sh
+    sudo ./debian13-fde-auto-setup-v1x.sh
 
+4. Reboot once set up completes.
+
+# BOOT PROCESS
+How the process works at boot time:
+	1.	GRUB loads from USB /boot partition
+	2.	Initramfs starts
+	3.	The passdev keyscript reads the crypttab entry
+	4.	It identifies the USB device by label/UUID
+	5.	Mounts the keyfile partition temporarily
+	6.	Reads the keyfile from USB
+	7.	Unlocks the LUKS container
+	8.	Unmounts the keyfile partition
+	9.	Continues booting with decrypted root
+
+Consider adding a swapfile on first login, since a swap partition adds increasing complexity for no significant advantage. Highly suggested for users with less than 16GB RAM.
+
+# General recommendations:
+	•	Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is not enough.
+	•	Header Backup: Store securely OFFLINE with restricted permissions
+	•	USB Protection: The USB keyfile stick is now a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!
+	•	Optional: Consider enabling TRIM for improved SSD performance.
+	•	System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out!
+
+# DISCLAIMER
+Please review the LUKS FDE Auto-setup bash script carefully. NEVER run a script blindly without understanding what it could do. Don't trust me. Google around to find out more. Please research, research, research.
 
 # LEGAL
+Please note that by downloading and running this bash script you acknowledge that I am not responsible or liable for any damages or losses arising from your use or inability to use the script and or software used under this script. You are solely responsible for your use of this script. If you harm someone or get into a dispute with a 3rd party, you consent to me waiving any involvement.
