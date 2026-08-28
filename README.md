@@ -13,7 +13,7 @@ High security (ie. encrypting everything, including the bootloader) comes at the
 
 # KEY FEATURES
 - Once encrypted, the system **CANNOT** boot without the USB stick
-- There is **no password typing on startup**, enabling a fast boot time)
+- There is **no password typing on startup**, enabling a fast boot time
 - Boot directory is physically seperated from the main disk so can't be tampered with (Evil Maid attack protection)
 - Separate encrypted /root and /home LVM partitions allows for independent management to make upgrading much simpler.
 - Choice of auto-installed desktop environments.
