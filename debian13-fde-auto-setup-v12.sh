@@ -438,12 +438,14 @@ case "$DE" in
     XFCE)  setup_xfce ;;
 esac
 
+# Firmware and basic packages (customize to your preference here)
 DEBIAN_FRONTEND=noninteractive apt-get install -y -q \
     sudo gnupg firmware-amd-graphics firmware-iwlwifi firmware-realtek \
     firmware-misc-nonfree intel-microcode locales wget nano exfat-fuse \
     ntfs-3g ufw curl htop ssh screen rsync xz-utils zip unzip file \
     manpages man-db lsof
 
+# Essential encryption packages
 DEBIAN_FRONTEND=noninteractive apt-get install -y -q \
     cryptsetup cryptsetup-initramfs lvm2 e2fsprogs mtools dosfstools grub-common
 
