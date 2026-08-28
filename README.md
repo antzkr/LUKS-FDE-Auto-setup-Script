@@ -2,7 +2,7 @@
 version 12
 
 # PURPOSE
-This bash script auto-sets up and installs a LUKS Full Disk Encryption system together with a Debian 13 desktop with minimal intervention. You will only have to choose the target disk and USB, root partition size, desktop environment, and username to get a completely working system.
+This bash script auto-sets up and installs a LUKS Full Disk Encryption system together with a Debian 13 desktop with minimal intervention to your device disk. You will only have to choose the target disk and USB, root partition size, desktop environment, and username to get a completely working system.
 
 Designed for the average user with some Linux experience who doesn't want the hassle of typing complex commands in the terminal.
 
