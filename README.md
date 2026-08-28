@@ -29,7 +29,7 @@ A minimal set of packages are installed to get you up and running on first boot.
 - Mate
 - XFCE
 
-Consider adding a swapfile on first login, since a swap partition adds increasing complexity for no significant advantage. Plus the size of a swapfile can be easily increased without restructuring the LVM layout. Highly suggested for systems with less than 16GB available RAM.
+Consider adding a swapfile on first login, since a swap partition adds increasing complexity for no significant advantage. Plus the size of a swapfile can be easily increased without restructuring the LVM layout. Strongly suggested for systems with less than 16GB available RAM.
 
 # SYSTEM REQUIREMENTS
 Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
