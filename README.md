@@ -9,12 +9,14 @@ High security (ie. encrypting everything, including the bootloader) comes at the
 - Main Disk: LUKS encrypted with LVM containing separate root and home logical volumes
 - Keyfile: Stored on USB, used to unlock the LUKS container without typing a password
 
+This script will auto-setup and install FDE and a completely working Debian 13 desktop with minimal intervention. You will only have to choose the target disk and USB, root partition size, desktop environment, and username.
+
 # KEY FEATURES
 - Once encrypted, system CANNOT boot without the USB stick
 - There is no password typing at startup, enabling a fast boot time)
 - Boot directory is physically seperated from the main disk so can't be tampered with (Evil Maid attack protection)
 - Separate encrypted /root and /home LVM partitions allows for independent management to make upgrading much simpler.
-- Choice of desktop environments
+- Choice of auto-installed desktop environments (GNOME, KDE, MATE, XFCE) with basic set of packages.
 
 # SYSTEM REQUIREMENTS
 Script can only be run from debian-based Linux flavors.
