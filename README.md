@@ -37,7 +37,7 @@ Script can only be built from Debian-based linux desktop environments. Other lin
 - ATA/SSD disk: An SSD is strongly recommended to counter the runtime encryption overhead
 - One USB for the keyfile (at least 1GB)
 - One USB for the bootable live USB OS (e.g. Debian 13 live)
-- Remember to backup important data. All data on disk will be irreversibly deleted!
+- Remember to backup important data!
 
 
 # INSTALLATION
