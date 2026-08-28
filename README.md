@@ -68,7 +68,7 @@ How the process works at boot time:
 
 # General recommendations:
 - Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is **not enough**.
-- Header Backup: Store securely **OFFLINE** with restricted permissions
+- Header Backup: Store securely OFFLINE with restricted permissions
 - USB Protection: **The USB keyfile stick is now a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!**
 - Optional: Consider enabling TRIM for improved SSD performance.
 - System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out.
