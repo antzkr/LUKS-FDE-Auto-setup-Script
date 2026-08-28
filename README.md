@@ -12,7 +12,7 @@ High security (ie. encrypting everything, including the bootloader) comes at the
 
 
 # KEY FEATURES
-- Once encrypted, the system CANNOT boot without the USB stick
+- Once encrypted, the system **CANNOT** boot without the USB stick
 - There is no password typing at startup, enabling a fast boot time)
 - Boot directory is physically seperated from the main disk so can't be tampered with (Evil Maid attack protection)
 - Separate encrypted /root and /home LVM partitions allows for independent management to make upgrading much simpler.
@@ -40,9 +40,9 @@ Script can only be built from Debian-based linux desktop environments. Other lin
 2. Boot into live environment and download the script.
 3. Make executable, run the script and follow the prompts:
 
-    chmod +x debian13-fde-auto-setup-v1x.sh
+    **chmod +x debian13-fde-auto-setup-v1x.sh**
 
-    sudo ./debian13-fde-auto-setup-v1x.sh
+    **sudo ./debian13-fde-auto-setup-v1x.sh**
 
 5. Reboot once set up completes.
 
