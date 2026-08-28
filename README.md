@@ -6,8 +6,6 @@ This bash script auto-sets up and installs a LUKS Full Disk Encryption system to
 
 Designed for the average user with some Linux experience who doesn't want the hassle of typing complex commands in the terminal.
 
-https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
-
 # RATIONALE
 High security (ie. encrypting everything, including the bootloader) comes at the cost of useability (and speed). This script aims to provide the best balance between security and convienience. The structure of the FDE system is as follows:
 - USB Stick: Contains /boot partition (unencrypted) and LUKS keyfile
@@ -15,6 +13,8 @@ High security (ie. encrypting everything, including the bootloader) comes at the
 - Keyfile: Stored on USB, used to unlock the LUKS container without typing a password
 
 Carefully assess whether the security of this setup works for you. FDE only works when the device is at rest: there is no protection while the device is powered on and running.
+
+https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 
 # KEY FEATURES
 - Once encrypted, the system **CANNOT** boot without the USB stick
