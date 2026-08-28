@@ -28,6 +28,8 @@ A minimal set of packages are installed to get you up and running on first boot.
 - Mate
 - XFCE
 
+Consider adding a swapfile on first login, since a swap partition adds increasing complexity for no significant advantage. Highly suggested for systems with less than 16GB available RAM.
+
 # SYSTEM REQUIREMENTS
 Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
 - Only x64 systems are supported (no legacy x32).
@@ -50,17 +52,15 @@ Script can only be built from Debian-based linux desktop environments. Other lin
 
 # BOOT PROCESS
 How the process works at boot time:
-	1.	GRUB loads from USB /boot partition
-	2.	Initramfs starts
-	3.	The passdev keyscript reads the crypttab entry
-	4.	It identifies the USB device by label/UUID
-	5.	Mounts the keyfile partition temporarily
-	6.	Reads the keyfile from USB
-	7.	Unlocks the LUKS container
-	8.	Unmounts the keyfile partition
-	9.	Continues booting with decrypted root
-
-Consider adding a swapfile on first login, since a swap partition adds increasing complexity for no significant advantage. Highly suggested for users with less than 16GB RAM.
+1.	GRUB loads from USB /boot partition
+2.	Initramfs starts
+3.	The passdev keyscript reads the crypttab entry
+4.	It identifies the USB device by label/UUID
+5.	Mounts the keyfile partition temporarily
+6.	Reads the keyfile from USB
+7.	Unlocks the LUKS container
+8.	Unmounts the keyfile partition
+9.	Continues booting with decrypted root
 
 # General recommendations:
 - Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is **not enough**.
