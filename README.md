@@ -40,7 +40,7 @@ Script can only be built from Debian-based linux desktop environments. Other lin
 - One USB for the keyfile (at least 1GB)
 - One USB for the bootable live USB OS (e.g. Debian 13 live)
 
-Installing FDE will destroy the existing data on the disk so remember to backup any important data before starting!
+Installing FDE will destroy ALL the existing data on the disk so remember to backup any important data before starting!
 
 
 # INSTALLATION
