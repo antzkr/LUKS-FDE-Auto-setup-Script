@@ -43,7 +43,7 @@ Script can only be built from Debian-based linux desktop environments. Other lin
     chmod +x debian13-fde-auto-setup-v1x.sh
     sudo ./debian13-fde-auto-setup-v1x.sh
 
-4. Reboot once set up completes.
+5. Reboot once set up completes.
 
 # BOOT PROCESS
 How the process works at boot time:
@@ -60,11 +60,11 @@ How the process works at boot time:
 Consider adding a swapfile on first login, since a swap partition adds increasing complexity for no significant advantage. Highly suggested for users with less than 16GB RAM.
 
 # General recommendations:
-	•	Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is not enough.
-	•	Header Backup: Store securely OFFLINE with restricted permissions
-	•	USB Protection: The USB keyfile stick is now a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!
-	•	Optional: Consider enabling TRIM for improved SSD performance.
-	•	System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out!
+- Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is not enough.
+- Header Backup: Store securely OFFLINE with restricted permissions
+- USB Protection: The USB keyfile stick is now a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!
+- Optional: Consider enabling TRIM for improved SSD performance.
+- System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out!
 
 # DISCLAIMER
 Please review the LUKS FDE Auto-setup bash script carefully. NEVER run a script blindly without understanding what it could do. Don't trust me. Google around to find out more. Please research, research, research.
