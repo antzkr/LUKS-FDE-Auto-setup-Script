@@ -12,7 +12,7 @@ High security (ie. encrypting everything, including the bootloader) comes at the
 - Main Disk: LUKS encrypted with LVM containing separate root and home logical volumes
 - Keyfile: Stored on USB, used to unlock the LUKS container without typing a password
 
-Carefully assess whether the security of this setup works for you. FDE only works when the device is at rest: there is no protection while the device is powered on and running. See here for a deeper FDE analysis:
+Carefully assess whether the security of this setup works for you. In my opinion, secure boot and TPM have their own issues (eg. can you trust the hardware?). Plus FDE only works when the device is at rest: there is no protection while the device is powered on and running. See here for a deeper FDE analysis:
 
 https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 
