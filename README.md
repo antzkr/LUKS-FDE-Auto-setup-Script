@@ -12,8 +12,9 @@ High security (ie. encrypting everything, including the bootloader) comes at the
 - Main Disk: LUKS encrypted with LVM containing separate root and home logical volumes
 - Keyfile: Stored on USB, used to unlock the LUKS container without typing a password
 
+Carefully assess whether the security of this setup works for you. FDE only works when the device is at rest: there is no protection while the device is powered on and running.
+
 # KEY FEATURES
-Carefully assess the security of this setup:
 - Once encrypted, the system **CANNOT** boot without the USB stick
 - There is **no password typing on startup**, enabling a fast boot time
 - Boot directory is physically seperated from the main disk so can't be tampered with (Evil Maid attack protection)
