@@ -17,8 +17,8 @@ Carefully assess whether the security of this setup works for you. FDE only work
 # KEY FEATURES
 - Once encrypted, the system **CANNOT** boot without the USB stick
 - There is **no password typing on startup**, enabling a fast boot time
-- Boot directory is physically seperated from the main disk so can't be tampered with (Evil Maid attack protection)
-- Separate encrypted /root and /home LVM partitions makes upgrading much simpler.
+- To mitigate against tampering, boot directory is physically seperated from the main disk (Evil Maid attack protection)
+- Separate encrypted /root and /home LVM partitions make upgrading much simpler.
 - Choice of auto-installed desktop environments.
 - UEFI and legacy BIOS are both supported.
 
