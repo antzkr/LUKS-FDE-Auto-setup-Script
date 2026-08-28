@@ -17,9 +17,10 @@ This script will auto-setup and install FDE and a completely working Debian 13 d
 - Boot directory is physically seperated from the main disk so can't be tampered with (Evil Maid attack protection)
 - Separate encrypted /root and /home LVM partitions allows for independent management to make upgrading much simpler.
 - Choice of auto-installed desktop environments (GNOME, KDE, MATE, XFCE) with basic set of packages.
+- UEFI and legacy BIOS are both supported.
 
 # SYSTEM REQUIREMENTS
-Script can only be run from debian-based Linux flavors.
+Bash script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
 - Only x64 systems are supported (no x32).
 - ATA/SSD disk: SSD is strongly recommended to counter the runtime encryption overhead
 - One USB for the keyfile (at least 1GB)
