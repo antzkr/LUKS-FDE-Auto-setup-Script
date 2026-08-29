@@ -25,7 +25,7 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 - UEFI and legacy BIOS are both supported.
 
 # CUSTOMIZATION
-A minimal set of packages are installed to get you up and running on first boot. If you want a very lean and basic install, feel free to modify the script, and add or delete packages as you wish. These desktop environments available during the build process:
+A minimal set of packages are installed to get you up and running on first boot. If you want a very lean and basic install, feel free to modify the script, and add or delete packages as you wish. These desktop environments are available during the build process:
 - KDE Plasma
 - Gnome
 - Mate
