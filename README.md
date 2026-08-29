@@ -33,7 +33,7 @@ A minimal set of packages are installed to get you up and running on first boot.
 
 # SYSTEM REQUIREMENTS
 Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
-- Only x64 systems are supported (no legacy x32).
+- Only x64 systems are supported (no legacy x32 architecture).
 - ATA/SSD disk: An SSD is strongly recommended to counter the runtime encryption overhead
 - One USB for the keyfile (at least 1GB)
 - One USB for the bootable live USB OS (e.g. Debian 13 live)
