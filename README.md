@@ -1,5 +1,5 @@
 # LUKS Full Disk Encryption Debian 13 Auto-setup Script
-version 12
+version 14
 
 # PURPOSE
 This bash script auto-sets up and installs a LUKS Full Disk Encryption system together with a Debian 13 desktop to your device disk with minimal intervention. You only have to choose the target disk and USB, root partition size, desktop environment, and username to get a completely working system.
@@ -9,7 +9,7 @@ Designed for the average user with some Linux experience who doesn't want the ha
 # RATIONALE
 High security (ie. encrypting everything, including the bootloader) comes at the cost of useability (and speed). This script aims to provide the best balance between security and convienience. The structure of the FDE system is as follows:
 - USB Stick: Contains /boot partition (unencrypted) and LUKS keyfile
-- Main Disk: LUKS encrypted with LVM containing separate root and home logical volumes
+- Main Disk: LUKS encrypted with LVM containing separate root, swap and home logical volumes
 - Keyfile: Stored on USB, used to unlock the LUKS container without typing a password
 
 Carefully assess whether the security of this setup works for you. Secure boot and TPM have their own issues (eg. can you trust the hardware?). FDE only works when the device is at rest: there is no protection while the device is powered on and running. See here for a deeper analysis:
@@ -30,8 +30,6 @@ A minimal set of packages are installed to get you up and running on first boot.
 - Gnome
 - Mate
 - XFCE
-
-Consider adding a swapfile on first login, since a swap partition adds increasing complexity for no real significant advantage. Plus the size of a swapfile can be easily increased without restructuring the LVM layout. This is strongly suggested for systems with less than 16GB available RAM.
 
 # SYSTEM REQUIREMENTS
 Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
@@ -70,6 +68,7 @@ How the process works at boot time:
 - Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is **not enough**.
 - Header Backup: Store securely OFFLINE with restricted permissions
 - USB Protection: **The USB keyfile stick is now a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!**
+- Swap has been configured as a separate LVM logical volume which can resized post-install with this script: /usr/local/bin/resize-swap.sh
 - Optional: Consider enabling TRIM for improved SSD performance.
 - System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out.
 
