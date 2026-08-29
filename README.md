@@ -20,7 +20,7 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 - Once encrypted, the system **CANNOT** boot without the USB stick
 - There is **no password typing on startup**, enabling a fast boot time
 - To mitigate against tampering, boot directory is physically seperated from the main disk (Evil Maid attack protection)
-- Separate /root and /home LVM partitions make upgrading much simpler.
+- Separate /root, /swap and /home LVM partitions make upgrading much simpler.
 - Choice of auto-installed desktop environments.
 - UEFI and legacy BIOS are both supported.
 
