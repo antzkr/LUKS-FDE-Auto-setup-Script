@@ -1029,10 +1029,6 @@ fi
 
 echo -e "\n ${C_GREEN}•${C_RESET} Store the backup LUKS header securely OFFLINE" >&2
 echo -e "   ${C_DIM}(LUKS header will be required for disaster recovery)${C_RESET}" >&2
-echo -e " ${C_GREEN}•${C_RESET} Swap has been configured as a separate LVM logical volume" >&2
-echo -e "   ${C_DIM}(can resize with: /usr/local/bin/resize-swap.sh)${C_RESET}" >&2
-echo -e " ${C_GREEN}•${C_RESET} If using an SSD, consider enabling TRIM to speed up boot time" >&2 
-echo -e "   ${C_DIM}(sudo systemctl enable fstrim.timer)${C_RESET}" >&2
 echo -e " ${C_GREEN}•${C_RESET} Optimize initramfs size by loading only modules for your hardware to speed up boot time" >&2 
 echo -e "   ${C_DIM}(sudo sed -i 's/MODULES=most/MODULES=dep' /etc/initramfs-tools/initramfs.conf && sudo update-initramfs -u -k all)${C_RESET}" >&2
 echo -e " ${C_GREEN}•${C_RESET} After every upgrade, update the initramfs and grub before rebooting" >&2
