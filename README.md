@@ -32,7 +32,7 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 
 
 # KEY FEATURES
-Password mode:
+Single Password mode:
 - Password only required **once** at boot
 - A keyfile protects the LVM volumes (password-less)
 - Entire disk is essentially encrypted, making tampering very very difficult
