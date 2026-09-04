@@ -112,13 +112,13 @@ And for 'USB keyfile' mode:
 
 
 
-# General recommendations:
+# Recommendations:
 - The password is the critical security factor **so use a strong password**:
 https://www.strongdm.com/blog/nist-password-guidelines
 - Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is **not enough**.
 - Header Backup: Store securely OFFLINE with restricted permissions (for emergency recovery)
 - USB Protection: **The USB keyfile stick is a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!**
-- Optional: Optimize initramfs size by loading only modules for your hardware to speed up boot time (sudo sed -i 's/MODULES=most/MODULES=dep' /etc/initramfs-tools/initramfs.conf && sudo update-initramfs -u -k all)
+- Optional: To speed up boot time optimize initramfs size by loading only the modules for your hardware (sudo sed -i 's/MODULES=most/MODULES=dep' /etc/initramfs-tools/initramfs.conf && sudo update-initramfs -u -k all)
 - System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out.
 
 
