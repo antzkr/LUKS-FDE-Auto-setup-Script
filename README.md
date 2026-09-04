@@ -107,7 +107,7 @@ And for USB keyfile mode:
 
 
 # General recommendations:
-- The password is the critical security factor so use a strong password:
+- The password is the critical security factor **so use a strong password**:
 https://www.strongdm.com/blog/nist-password-guidelines
 - Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is **not enough**.
 - Header Backup: Store securely OFFLINE with restricted permissions (for emergency recovery)
