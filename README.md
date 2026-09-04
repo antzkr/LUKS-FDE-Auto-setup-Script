@@ -82,11 +82,9 @@ Installing will destroy ALL the existing data on the disk so remember to backup 
 
 
 # DEFAULT SETTINGS
-Locale: en_US
-
-Username/Password: (set by user)
-
-Root password: changeme
+- Locale: en_US
+- Username/Password: (set by user)
+- Root password: changeme
 
 **CRITICAL: Change the root password on first boot!**
 
