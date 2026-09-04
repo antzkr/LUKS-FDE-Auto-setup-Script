@@ -24,7 +24,7 @@ USB keyfile:
 - Main Disk: LUKS encrypted with LVM volumes containing separate root, swap and home
 - Keyfile: Stored on USB, used to unlock disk without typing a password
 
-Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice. Secure boot and TPM have their own issues (eg. Are the chips open-source? Can you trust the hardware?) so they were not factored into this build.
+Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice. Both Secure Boot and TPM have their own issues (eg. Are the chips open-source? Can you trust the hardware? Government backdoors?) so they were not factored into this build.
 
 Remember that FDE only works when the device is at rest so there is **no protection** while the device is powered on and running. Read this wiki for a deeper analysis of various FDE models:
 
