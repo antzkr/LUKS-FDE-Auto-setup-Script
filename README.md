@@ -20,13 +20,13 @@ This script aims to provide the user with a choice between the two most effectiv
 The structure of the FDE system can be built according to two modes: 'Single Password' mode and 'USB keyfile' mode.
 
 Single Password:
-- Main Disk: Boot partition encrypted with password, used to unlock the embedded LUKS keyfile for the encrypted LVM volumes.
-- Main Disk: LUKS encrypted with LVM volumes containing root, swap and home.
+- Main Disk: Boot partition LUKS encrypted, with a password used to unlock the embedded keyfile for the LVM volume.
+- Main Disk: LUKS encrypted LVM volume containing root, swap and home.
 
 USB keyfile:
-- USB Stick: Boot partition (unencrypted) with embedded LUKS keyfile used to unlock disk
-- Main Disk: LUKS encrypted with LVM volumes containing separate root, swap and home
-- Keyfile: Stored on USB, used to unlock disk without typing a password
+- USB Stick: Boot partition (unencrypted) with embedded  keyfile used to unlock main disk
+- Main Disk: LUKS encrypted LVM volume containing separate root, swap and home
+- Keyfile: Stored on USB, used to unlock main disk without typing a password
 
 Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice. Both Secure Boot and TPM have their own issues (eg. Are the chips open-source? Can you trust the hardware? Government backdoors?) so they were not factored into this build.
 
