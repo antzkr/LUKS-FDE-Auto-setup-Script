@@ -13,7 +13,7 @@ High security (ie. encrypting everything, including the bootloader) comes at the
 
 
 # SECURITY MODES
-The structure of the FDE system can be built according to two modes: Password mode and USB keyfile mode.
+The structure of the FDE system can be built according to two modes: 'Single Password' mode and 'USB keyfile' mode.
 
 Single Password:
 - Main Disk: Boot partition encrypted with password, used to unlock the embedded LUKS keyfile for the encrypted LVM volumes.
@@ -24,7 +24,7 @@ USB keyfile:
 - Main Disk: LUKS encrypted with LVM volumes containing separate root, swap and home
 - Keyfile: Stored on USB, used to unlock disk without typing a password
 
-Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the USB keyfile mode is recommended. If physical security is a major threat, the Single Password mode would be a better fit. Secure boot and TPM have their own issues (eg. Are the chips open-source? Can you trust the hardware?) so they were not factored into this build.
+Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice. Secure boot and TPM have their own issues (eg. Are the chips open-source? Can you trust the hardware?) so they were not factored into this build.
 
 Remember that FDE only works when the device is at rest so there is **no protection** while the device is powered on and running. Read this wiki for a deeper analysis of various FDE models:
 
@@ -32,12 +32,12 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 
 
 # KEY FEATURES
-Single Password mode:
+'Single Password' mode:
 - Password only required **once** at boot
 - A keyfile protects the LVM volumes (password-less)
 - Entire disk is essentially encrypted, making tampering very very difficult
 
-USB keyfile mode:
+'USB keyfile' mode:
 - System **CANNOT** boot without the USB stick
 - There is **no password typing on startup**, enabling a fast boot time
 - Boot directory is physically seperated from the main disk
@@ -55,7 +55,7 @@ A very lean set of packages are installed to get you up and running on first boo
 - Mate
 - XFCE
 
-Note: LUKS default encryption parameters are completely fine for most users. Even though LUKS2 is marginally stronger than LUKS1, GRUB requires a LUKS1 encrypted partition to work successfully in Single Password mode. In practice the differences between the two are not that significant - encryption parameters only matter when the password is weak! Aim to generate a password with at least 80+ bits of entropy.
+Note: LUKS default encryption parameters are completely fine for most users. Even though LUKS2 is marginally stronger than LUKS1, GRUB requires a LUKS1 encrypted partition to work successfully in 'Single Password' mode. In practice the differences between the two are not that significant - encryption parameters only matter when the password is weak! Aim to generate a password with at least 80+ bits of entropy.
 
 
 # SYSTEM REQUIREMENTS
@@ -90,14 +90,14 @@ Installing will destroy ALL the existing data on the disk so remember to backup 
 
 
 # BOOT PROCESS
-How the process works at boot time for Single Password mode:
+How the process works at boot time for 'Single Password' mode:
 1. Device prompts for password → unlocks LUKS1 boot partition
 2. GRUB loads kernel & initramfs (which contains embedded keyfile)
 3. Kernel boots → initramfs starts
 4. initramfs automatically unlocks LUKS2 crypt-disk partition using embedded keyfile
 5. LVM volumes activate, mount, & system boots
 
-And for USB keyfile mode:
+And for 'USB keyfile' mode:
 1. GRUB loads from USB stick
 2. Kernel boots → initramfs starts
 3. initramfs waits for USB device via passdev script
