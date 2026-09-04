@@ -38,7 +38,7 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 # KEY FEATURES
 'Single Password' mode:
 - Password only required **once** at boot
-- A keyfile protects the LVM volumes (password-less)
+- A keyfile protects the LVM volumes (no 2nd password)
 - Entire disk is essentially encrypted, making tampering very very difficult
 
 'USB keyfile' mode:
@@ -47,7 +47,7 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 - Boot directory is physically seperated from the main disk
 
 Both modes include:
-- Separate /root, /swap and /home LVM volumes, making upgrades much simpler
+- Separate /root, /swap and /home LVM volumes for simpler upgrades
 - Choice of auto-installed minimal desktop environments
 - Support for both UEFI and legacy BIOS systems
 
