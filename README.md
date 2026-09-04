@@ -97,14 +97,14 @@ How the process works at boot time for 'Single Password' mode:
 2. GRUB loads kernel & initramfs (which contains embedded keyfile)
 3. Kernel boots → initramfs starts
 4. initramfs automatically unlocks LUKS2 crypt-disk partition using embedded keyfile
-5. LVM volumes activate, mount, & system boots
+5. LVM volumes activate, mount, & system loads to desktop
 
 And for 'USB keyfile' mode:
 1. GRUB loads from USB stick
 2. Kernel boots → initramfs starts
 3. initramfs waits for USB device via passdev script
 4. Reads keyfile from USB → unlocks LUKS2 crypt-disk automatically
-5. LVM volumes activate, mount, & system boots
+5. LVM volumes activate, mount, & system loads to desktop
 
 
 
