@@ -12,7 +12,7 @@ Designed for the average user with some Linux experience who doesn't want the ha
 High security (ie. encrypting everything, including the bootloader) comes at the cost of useability (and speed). Whereas, medium security (ie. password-less boot) is vulnerable to physical risks. This script aims to provide the user with a choice between these two models, depending on their threat scenario.
 
 
-# SECURITY MODE
+# SECURITY MODES
 The structure of the FDE system can be built according to two modes: Password mode and USB keyfile mode.
 
 Single Password:
@@ -24,7 +24,7 @@ USB keyfile:
 - Main Disk: LUKS encrypted with LVM volumes containing separate root, swap and home
 - Keyfile: Stored on USB, used to unlock disk without typing a password
 
-Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the USB keyfile mode is recommended. If physical security is a major threat, the Single Password mode would be a better fit. Secure boot and TPM have their own issues (eg. Are the chips open-source? Can you trust the hardware?) so were not factored into this build.
+Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the USB keyfile mode is recommended. If physical security is a major threat, the Single Password mode would be a better fit. Secure boot and TPM have their own issues (eg. Are the chips open-source? Can you trust the hardware?) so they were not factored into this build.
 
 Remember that FDE only works when the device is at rest so there is **no protection** while the device is powered on and running. Read this wiki for a deeper analysis of various FDE models:
 
