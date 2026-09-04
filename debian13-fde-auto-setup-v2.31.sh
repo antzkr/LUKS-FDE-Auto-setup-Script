@@ -85,17 +85,16 @@ select_encryption_mode() {
     echo -e "${C_CYAN}Select Encryption Mode:${C_RESET}\n" >&2
 
     echo -e "  ${C_BOLD}${C_YELLOW}1) Single Password Mode${C_RESET}" >&2
-    echo -e "  ${C_DIM}(High security, encrypted boot)${C_RESET}" >&2
+    echo -e "  ${C_DIM}(Very strong security, encrypted boot)${C_RESET}" >&2
     echo -e "     • Encrypted /boot partition" >&2
     echo -e "     • Single password unlocks everything" >&2
     echo -e "     • Keyfile auto-unlocks LVM" >&2
     echo -e "     ${C_GREEN}✓${C_RESET} No USB key required" >&2
-    echo -e "     ${C_GREEN}✓${C_RESET} Single password entry at boot" >&2
     echo -e "     ${C_RED}✗${C_RESET} Password required at boot" >&2
     echo -e "     ${C_RED}✗${C_RESET} Slower boot time\n" >&2
 
     echo -e "  ${C_BOLD}${C_YELLOW}2) USB Keyfile Mode${C_RESET}" >&2
-    echo -e "  ${C_DIM}(Medium security, USB key)${C_RESET}" >&2
+    echo -e "  ${C_DIM}(Strong security, USB boot & key)${C_RESET}" >&2
     echo -e "     • Unencrypted /boot on USB" >&2
     echo -e "     • Keyfile on USB unlocks LVM" >&2
     echo -e "     ${C_GREEN}✓${C_RESET} No password needed at boot" >&2
