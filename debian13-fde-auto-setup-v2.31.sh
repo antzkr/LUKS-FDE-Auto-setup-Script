@@ -91,7 +91,8 @@ select_encryption_mode() {
     echo -e "     • Keyfile auto-unlocks LVM" >&2
     echo -e "     ${C_GREEN}✓${C_RESET} No USB key required" >&2
     echo -e "     ${C_GREEN}✓${C_RESET} Single password entry at boot" >&2
-    echo -e "     ${C_RED}✗${C_RESET} Password required at boot\n" >&2
+    echo -e "     ${C_RED}✗${C_RESET} Password required at boot" >&2
+    echo -e "     ${C_RED}✗${C_RESET} Slower boot time\n" >&2
 
     echo -e "  ${C_BOLD}${C_YELLOW}2) USB Keyfile Mode${C_RESET}" >&2
     echo -e "  ${C_DIM}(Medium security, USB key)${C_RESET}" >&2
@@ -99,7 +100,8 @@ select_encryption_mode() {
     echo -e "     • Keyfile on USB unlocks LVM" >&2
     echo -e "     ${C_GREEN}✓${C_RESET} No password needed at boot" >&2
     echo -e "     ${C_GREEN}✓${C_RESET} Automatic boot" >&2
-    echo -e "     ${C_RED}✗${C_RESET} USB stick required\n" >&2
+    echo -e "     ${C_RED}✗${C_RESET} USB stick required" >&2
+    echo -e "     ${C_RED}✗${C_RESET} USB theft/loss compromises security\n" >&2
 
     echo -e "═════════════════════════════════════════════════════════\n" >&2
 
