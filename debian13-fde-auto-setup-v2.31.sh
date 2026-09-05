@@ -97,8 +97,7 @@ select_encryption_mode() {
     echo -e "  ${C_DIM}(Strong security, USB boot & key)${C_RESET}" >&2
     echo -e "     • Unencrypted /boot on USB" >&2
     echo -e "     • Keyfile on USB unlocks LVM" >&2
-    echo -e "     ${C_GREEN}✓${C_RESET} No password needed at boot" >&2
-    echo -e "     ${C_GREEN}✓${C_RESET} Automatic boot" >&2
+    echo -e "     ${C_GREEN}✓${C_RESET} Automatic boot (no password needed)" >&2
     echo -e "     ${C_RED}✗${C_RESET} USB stick required" >&2
     echo -e "     ${C_RED}✗${C_RESET} USB theft/loss compromises security\n" >&2
 
