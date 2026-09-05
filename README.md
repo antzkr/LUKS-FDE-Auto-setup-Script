@@ -30,9 +30,9 @@ USB keyfile:
 
 Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice.
 
-Using both Secure Boot and TPM in the boot chain will give you the strongest security but they will also create much more complexity eg. every system update will require resetting signatures and keys. Which is why this method was excluded from this build.
+Using both Secure Boot and TPM in the boot chain will give you the strongest security but will also create much more complexity eg. every system update will require resetting signatures and keys. Which is why this method was excluded from this build. In fact, for users wanting the ultimate secure system the only way is to NOT have ANY vulnerable data in their physical possession at all. How can you compromise something that doesn't exist?
 
-Remember that FDE only works when the device is at rest so there is **no protection** while the device is powered on and running. Read this wiki for a deeper analysis of various FDE models:
+And remember that FDE only works when the device is at rest so there is **no protection** while the device is powered on and running. Read this wiki for a deeper analysis of various FDE models:
 
 https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 
