@@ -11,7 +11,7 @@ Designed for the average user with some Linux experience who doesn't want the ha
 # RATIONALE
 Standard LUKS FDE on typical linux distributions take the approach of encrypting the OS partitions (root, swap and home) but not the boot partition. For some users this might not be secure enough. But there is a problem. What is the best way to protect a system without making everyday use too inconvenient?
 
-Securing a system always comes with trade-offs. Encrypting everything on a disk (including the bootloader) comes at the cost of useability and speed. Whereas, using a password-less encrypted boot is vulnerable to physical risks such loss or theft.
+Securing a system always comes with trade-offs. Encrypting everything on a disk (including the bootloader) comes at the cost of useability and speed. Whereas, using a password-less encrypted boot is vulnerable to physical risks such as loss or theft.
 
 This script aims to provide the user with a choice between the two most effective models for secure everyday use, depending on their threat scenario.
 
