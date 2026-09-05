@@ -121,6 +121,7 @@ https://www.strongdm.com/blog/nist-password-guidelines
 - Header Backup: Store securely OFFLINE with restricted permissions (for emergency recovery)
 - USB Protection: **The USB keyfile stick is a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!**
 - Optional: To speed up boot time optimize initramfs size by loading only the modules for your hardware (sudo sed -i 's/MODULES=most/MODULES=dep' /etc/initramfs-tools/initramfs.conf && sudo update-initramfs -u -k all)
+- For troubleshooting you can find the log file at: /var/log/debian-fde-setup.log
 - System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out.
 
 
