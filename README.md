@@ -55,7 +55,7 @@ Both modes include:
 
 
 # CUSTOMIZATION
-A very lean set of packages are installed to get your desktop up and running on first boot. No uneccessary fluff. Or if you prefer you can preseed your own custom packages. Feel free to modify the script, and add or delete packages as you wish. These desktop environments are available during the build process:
+A very lean set of packages are installed to get your desktop up and running on first boot. No uneccessary fluff. Or, if you prefer, you can preseed your own custom packages. Feel free to modify the script, and add or delete packages as you wish. These desktop environments are available during the build process:
 - KDE Plasma
 - Gnome
 - Mate
