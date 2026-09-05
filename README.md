@@ -41,7 +41,7 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 'Single Password' mode:
 - Password only required **once** at boot
 - A keyfile protects the LVM volumes (no 2nd password)
-- Entire disk is essentially encrypted, making tampering very very difficult
+- Entire disk is essentially encrypted, making tampering very difficult
 
 'USB keyfile' mode:
 - System **CANNOT** boot without the USB stick
