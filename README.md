@@ -97,7 +97,7 @@ sudo ./debian13-fde-auto-setup-v2x.sh
 
 **CRITICAL: Change the root password on first boot!**
 
-Aim to generate a password with at least 80 bits of entropy.
+Aim to generate passwords with at least 80 bits of entropy.
 
 
 # BOOT PROCESS
