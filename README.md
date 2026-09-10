@@ -61,6 +61,8 @@ A very lean set of packages are installed to get your desktop up and running on 
 - Mate
 - XFCE
 
+Two additional options are offered at the start the script. You can re-install FDE (keeping existing keyslots and partition structure) or you modify LUKS keyslots on an existing FDE system (keeping existing data). Making LUKS FDE systems easier to manage over time.
+
 LUKS default encryption parameters are completely fine for most users. Even though LUKS2 is marginally stronger than LUKS1, GRUB requires a LUKS1 encrypted partition to work successfully in 'Single Password' mode. In practice the differences between the two are not that significant - encryption parameters only matter when the password is weak! 
 
 Aim to generate a password with at least 80 bits of entropy.
