@@ -129,6 +129,15 @@ https://www.strongdm.com/blog/nist-password-guidelines
 - System upgrade: After every kernel change you should update the initramfs and grub before rebooting, otherwise your system could lock you out.
 
 
+# SCREENSHOTS
+
+![First screen](Screenshot-1.png)
+![Second screen](Screenshot-2.png)
+![Third screen](Screenshot-3.png)
+![Forth screen](Screenshot-4.png)
+![Fifth screen](Screenshot-5.png)
+
+
 # DISCLAIMER
 Please review the LUKS FDE Auto-setup bash script carefully. NEVER run a script blindly without understanding what it could do. Don't trust me. Google around to find out more. Please research, research, research.
 
