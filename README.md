@@ -85,8 +85,7 @@ Installing will destroy ALL the existing data on the disk so remember to backup 
 3. Make executable, run the script and follow the prompts:
 
 ```chmod +x debian13-fde-auto-setup-v2x.sh
-sudo ./debian13-fde-auto-setup-v2x.sh
-```
+```sudo ./debian13-fde-auto-setup-v2x.sh
 
 5. Reboot once set up completes.
 
