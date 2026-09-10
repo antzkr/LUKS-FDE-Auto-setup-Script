@@ -65,11 +65,6 @@ Two additional options are offered at the start of the script:
 
 Making LUKS FDE systems easier to manage over time without finiky manual intervention.
 
-# Note
-LUKS default encryption parameters are completely fine for most users. Even though LUKS2 is marginally stronger than LUKS1, GRUB requires a LUKS1 encrypted partition to work successfully in 'Single Password' mode. In practice the differences between the two are not that significant - encryption parameters only matter when the password is weak! 
-
-Aim to generate a password with at least 80 bits of entropy.
-
 
 # SYSTEM REQUIREMENTS
 Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
@@ -101,6 +96,8 @@ sudo ./debian13-fde-auto-setup-v2x.sh
 - Root password: changeme
 
 **CRITICAL: Change the root password on first boot!**
+
+Aim to generate a password with at least 80 bits of entropy.
 
 
 # BOOT PROCESS
