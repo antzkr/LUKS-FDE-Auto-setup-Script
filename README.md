@@ -1,5 +1,5 @@
 # LUKS Full Disk Encryption Debian 13 Auto-setup Script
-version 2.31
+version 2.xx
 
 
 # PURPOSE
@@ -30,7 +30,7 @@ USB keyfile:
 
 Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice.
 
-Using both Secure Boot and TPM in the boot chain will give you the strongest security but will also give you more complexity. And there is also the question of can you trust the UEFI/BIOS. The firmware is not open-source, so what is in it? Which is why these methods were excluded from this build.
+Using both Secure Boot and TPM in the boot chain will give you the strongest security but will also give you more complexity. And there is also the question of can you trust the UEFI/BIOS. The firmware is not open-source, so what is in it? Which is why these methods were excluded from this build. The ultimate security is to run LUKS FDE on an open-source firmware device (eg. Coreboot) with Secure Boot and TPM validating boot.
 
 Read this wiki for a deeper analysis of various FDE models:
 
@@ -61,7 +61,7 @@ A very lean set of packages are installed to get your desktop up and running on 
 - Mate
 - XFCE
 
-Two additional options are offered at the start the script. You can re-install FDE (keeping existing keyslots and partition structure) or you modify LUKS keyslots on an existing FDE system (keeping existing data). Making LUKS FDE systems easier to manage over time.
+Two additional options are offered at the start the script. You can re-install FDE (keeping existing keyslots and partition structure) or modify LUKS keyslots on an existing system (keeping existing data). Making LUKS FDE systems easier to manage over time without finiky manual adjustments.
 
 LUKS default encryption parameters are completely fine for most users. Even though LUKS2 is marginally stronger than LUKS1, GRUB requires a LUKS1 encrypted partition to work successfully in 'Single Password' mode. In practice the differences between the two are not that significant - encryption parameters only matter when the password is weak! 
 
