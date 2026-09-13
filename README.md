@@ -135,7 +135,6 @@ https://www.strongdm.com/blog/nist-password-guidelines
 ![Second screen](Screenshot-2.png)
 ![Third screen](Screenshot-3.png)
 ![Forth screen](Screenshot-4.png)
-![Fifth screen](Screenshot-5.png)
 
 
 # DISCLAIMER
