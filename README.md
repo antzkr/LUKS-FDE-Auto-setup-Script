@@ -1,5 +1,5 @@
 # LUKS Full Disk Encryption Debian 13 Auto-setup Script
-version 2.41
+version 2.43
 
 
 # PURPOSE
@@ -22,7 +22,7 @@ Single Password:
 - Main Disk: LUKS encrypted LVM volume containing root, swap and home.
 
 USB keyfile:
-- USB Stick: Boot partition with embedded keyfile (both unencrypted) used to unlock main disk
+- USB Stick: EFI/BIOS and boot partition with embedded keyfile (both unencrypted) used to unlock main disk
 - Main Disk: LUKS encrypted LVM volume containing separate root, swap and home
 - Keyfile: Stored on USB, used to unlock main disk without typing a password
 
@@ -44,7 +44,7 @@ https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Overview
 'USB keyfile' mode:
 - System **CANNOT** boot without the USB stick
 - There is **no password typing on startup**, enabling a fast boot time
-- Boot directory is physically seperated from the main disk
+- EFI/BIOS and boot directories are physically seperated from the main disk
 
 Both modes include:
 - Separate /root, /swap and /home LVM volumes for simpler upgrades
@@ -100,27 +100,10 @@ sudo ./debian13-fde-auto-setup-v2x.sh
 Aim to generate passwords with at least 80 bits of entropy.
 
 
-# BOOT PROCESS
-How the process works at boot time for 'Single Password' mode:
-1. Device prompts for password → unlocks LUKS1 boot partition
-2. GRUB loads kernel & initramfs (which contains embedded keyfile)
-3. Kernel boots → initramfs starts
-4. initramfs automatically unlocks LUKS2 crypt-disk partition using embedded keyfile
-5. LVM volumes activate, mount, & system loads to desktop
-
-And for 'USB keyfile' mode:
-1. GRUB loads from USB stick
-2. Kernel boots → initramfs starts
-3. initramfs waits for USB device via passdev script
-4. Reads keyfile from USB → unlocks LUKS2 crypt-disk automatically
-5. LVM volumes activate, mount, & system loads to desktop
-
-
-
 # Recommendations:
 - The password is the critical security factor **so use a strong password**:
 https://www.strongdm.com/blog/nist-password-guidelines
-- Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. One USB backup is **not enough**.
+- Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. Create direct copies by block (use DD). One USB backup is **not enough**.
 - Header Backup: Store securely OFFLINE with restricted permissions (for emergency recovery)
 - USB Protection: **The USB keyfile stick is a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!**
 - Optional: To speed up boot time optimize initramfs size by loading only the modules for your hardware (sudo sed -i 's/MODULES=most/MODULES=dep' /etc/initramfs-tools/initramfs.conf && sudo update-initramfs -u -k all)
