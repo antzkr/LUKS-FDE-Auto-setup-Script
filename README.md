@@ -22,7 +22,7 @@ Single Password:
 - Main Disk: LUKS encrypted LVM volume containing root, swap and home.
 
 USB keyfile:
-- USB Stick: EFI/BIOS and boot partition with embedded keyfile (both unencrypted) used to unlock main disk
+- USB Stick: EFI/BIOS and boot partitions with embedded keyfile (both unencrypted) used to unlock main disk
 - Main Disk: LUKS encrypted LVM volume containing separate root, swap and home
 - Keyfile: Stored on USB, used to unlock main disk without typing a password
 
@@ -104,7 +104,7 @@ Aim to generate passwords with at least 80 bits of entropy.
 # Recommendations:
 - The password is the critical security factor **so use a strong password**:
 https://www.strongdm.com/blog/nist-password-guidelines
-- Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. Create direct copies by block (use DD). One USB backup is **not enough**.
+- Keyfile Backup: Store multiple backups of the USB keyfile in secure locations. Create direct block copies (use DD). One USB backup is **not enough**.
 - Header Backup: Store securely OFFLINE with restricted permissions (for emergency recovery)
 - USB Protection: **The USB keyfile stick is a critical component - protect it physically like real keys. Don't get lazy and leave the USB in the device when not in use!**
 - Optional: To speed up boot time optimize initramfs size by loading only the modules for your hardware (sudo sed -i 's/MODULES=most/MODULES=dep' /etc/initramfs-tools/initramfs.conf && sudo update-initramfs -u -k all)
