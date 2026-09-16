@@ -64,7 +64,7 @@ Two additional options are offered at the start of the script:
 1. Re-install FDE (keeping existing keyslots and partition structure)
 2. Modify existing LUKS keyslots (keeping existing data).
 
-Making LUKS FDE systems easier to manage over time without finiky manual intervention.
+These options were added to make LUKS FDE systems easier to manage over time without finiky manual intervention.
 
 
 # SYSTEM REQUIREMENTS
