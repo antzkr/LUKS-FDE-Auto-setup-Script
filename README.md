@@ -60,7 +60,7 @@ A very lean set of packages are installed to get your desktop up and running on 
 - Mate
 - XFCE
 
-Two additional options are offered at the start of the script:
+Two choices are offered at the start:
 1. Re-install FDE (keeping existing keyslots and partition structure)
 2. Modify existing LUKS keyslots (keeping existing data).
 
