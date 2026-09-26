@@ -22,7 +22,7 @@ Single Password:
 - Main Disk: LUKS encrypted LVM volume containing root, swap and home.
 
 USB keyfile:
-- USB Stick: EFI/BIOS and boot partitions with embedded keyfile (both unencrypted) used to unlock main disk
+- USB Stick: EFI/BIOS and boot partitions with embedded keyfile (all unencrypted) used to unlock main disk
 - Main Disk: LUKS encrypted LVM volume containing separate root, swap and home
 - Keyfile: Stored on USB, used to unlock main disk without typing a password
 
