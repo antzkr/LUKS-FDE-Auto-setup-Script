@@ -26,7 +26,7 @@ USB keyfile:
 - Main Disk: LUKS encrypted LVM volume containing separate root, swap and home
 - Keyfile: Stored on USB, used to unlock main disk without typing a password
 
-Carefully assess which security setup works best for you. They both have their pros and cons. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice.
+Carefully assess which security setup works best for you. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice.
 
 Using both Secure Boot and TPM in the boot chain will give you the strongest security but will also give you more complexity. And there is also the question of can you trust the UEFI/BIOS. The firmware is not open-source, so what is in it? Which is why these methods were excluded from this build. The ultimate security is to run LUKS FDE on an open-source firmware device (eg. Coreboot) with Secure Boot and TPM validating boot.
 
