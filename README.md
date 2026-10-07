@@ -28,7 +28,7 @@ USB keyfile:
 
 Carefully assess which security setup works best for you. If typing a secure password on every boot is bothersome to you, the 'USB keyfile' mode is recommended. If physical security is a major threat, the 'Single Password' mode would be a better choice.
 
-Using both Secure Boot and TPM in the boot chain will give you the strongest security but will also give you more complexity. And there is also the question of can you trust the UEFI/BIOS. The firmware is not open-source, so what is in it? Which is why these methods were excluded from this build. The ultimate security is to run LUKS FDE on an open-source firmware device (eg. Coreboot) with Secure Boot and TPM validating boot.
+Using both Secure Boot and TPM in the boot chain will give you the strongest security but will also give you more complexity. And there is also the question of can you trust the UEFI/BIOS? The firmware is not open-source, so what is in it? Which is why these methods were excluded from this build. The ideal setup is to run LUKS FDE on an open-source firmware device (eg. Coreboot) with Secure Boot and TPM validating boot.
 
 Read this wiki for a deeper analysis of various FDE models:
 
