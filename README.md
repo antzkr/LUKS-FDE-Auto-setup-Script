@@ -92,9 +92,10 @@ sudo ./debian13-fde-auto-setup-v2x.sh
 
 
 # DEFAULT SETTINGS
-- Locale: en_US
-- Username/Password: (set by user)
-- Optional Root password: (set by user)
+- LOCALE: en_US
+- USERNAME: (set by user)
+- PASSWORD: (set by user)
+- ROOT: (set by user)
 
 Aim to generate passwords with at least 80 bits of entropy.
 
