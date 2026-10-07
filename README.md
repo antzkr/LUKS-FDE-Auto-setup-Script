@@ -1,5 +1,5 @@
 # LUKS Full Disk Encryption Debian 13 Auto-setup Script
-version 2.43
+version 2.46
 
 
 # PURPOSE
@@ -94,9 +94,7 @@ sudo ./debian13-fde-auto-setup-v2x.sh
 # DEFAULT SETTINGS
 - Locale: en_US
 - Username/Password: (set by user)
-- Root password: changeme
-
-**CRITICAL: Change the root password on first boot!**
+- Optional Root password: (set by user)
 
 Aim to generate passwords with at least 80 bits of entropy.
 
