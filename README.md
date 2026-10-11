@@ -69,7 +69,7 @@ These options were added to make LUKS FDE systems easier to manage over time wit
 
 
 # SYSTEM REQUIREMENTS
-Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Slackware are not supported.
+Script can only be built from Debian-based linux desktop environments. Other linux derivatives such as Arch, Fedora or Manjaro are not supported - since a Debian desktop will be installed. Additionally:
 - Only x64 systems are supported (no legacy x32 architecture).
 - ATA/SSD disk: An SSD is strongly recommended to counter the runtime encryption overhead
 - One USB for the keyfile (at least 1GB)
