@@ -89,7 +89,7 @@ chmod +x debian13-fde-auto-setup-v2x.sh
 sudo ./debian13-fde-auto-setup-v2x.sh
 ```
 
-5. Reboot once set up completes.
+4. Reboot once set up completes.
 
 
 # DEFAULT SETTINGS
