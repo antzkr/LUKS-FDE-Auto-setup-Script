@@ -15,7 +15,7 @@ Securing a system always comes with trade-offs. This script aims to provide the 
 
 
 # SECURITY MODES
-The structure of the FDE system can be built according to two modes: 'Single Password' mode and 'USB keyfile' mode.
+The structure of the FDE system can be built according to two modes:
 
 Single Password:
 - Main Disk: Boot partition LUKS encrypted, with a password used to unlock the embedded keyfile for the LVM volume.
